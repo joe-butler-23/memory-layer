@@ -130,6 +130,11 @@ SUCCESS: Injected context {"totalLines":24}
 
 ## Status
 
-**Priority 1 & 3 Complete** - All core productivity memories seeded and PTT commands implemented.
+**Priority 1, 2 (Embeddings), & 3 Complete**
 
-See [PLAN.md](./PLAN.md) for remaining priorities.
+- All core productivity memories seeded
+- PTT commands implemented (`--done`, `--due`, `--sprint`, `events`, `week`, `review`)
+- OpenAI `text-embedding-3-large` embeddings active (3072 dimensions)
+- Config: `~/.config/openmemory/env`
+
+See [PLAN.md](./PLAN.md) for remaining priorities (plugin improvements, platform expansion).

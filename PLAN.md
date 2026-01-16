@@ -37,10 +37,10 @@ All memories seeded and PTT commands implemented.
 
 ## Priority 2: Infrastructure Improvements
 
-### Embedding Upgrade
-- [ ] Switch from current embedding model to OpenAI `text-embedding-3-small`
-- [ ] Benchmark intent matching accuracy before/after
-- [ ] Update om-query configuration
+### Embedding Upgrade ✅ Complete
+- [x] Switched to OpenAI `text-embedding-3-large` (3072 dimensions)
+- [x] Config: `~/.config/openmemory/env` (auto-sourced in zshrc)
+- [x] Re-embedded all memories, verified semantic matching improved
 
 ### Plugin Improvements
 - [ ] Deduplicate exec commands (currently runs same command multiple times if in multiple memories)
@@ -94,5 +94,7 @@ All required commands implemented:
 1. ~~Verify ptt commands exist~~ ✅
 2. ~~Seed Priority 1 memories~~ ✅
 3. ~~Develop missing PTT commands~~ ✅
-4. **Upgrade embeddings** - Switch to OpenAI model for better semantic matching
-5. **Expand to Priority 2-4** - Plugin improvements and extended domains
+4. ~~Upgrade embeddings~~ ✅
+5. **Plugin improvements** - Deduplication, score threshold, caching
+6. **Platform expansion** - Claude Code hooks, Context Protocol docs
+7. **Extended domains** - Coding assistance, system maintenance memories
