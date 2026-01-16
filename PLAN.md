@@ -98,3 +98,8 @@ All required commands implemented:
 5. **Plugin improvements** - Deduplication, score threshold, caching
 6. **Platform expansion** - Claude Code hooks, Context Protocol docs
 7. **Extended domains** - Coding assistance, system maintenance memories
+
+### Plugin Improvements ✅ Complete
+- [x] Deduplicate exec commands (uses Set to track unique commands)
+- [x] Add score threshold for exec (only run if score ≥ 1.0)
+- [x] Cache command output within session (Map per sessionID)
