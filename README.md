@@ -22,6 +22,14 @@ This project implements **Executable Memories** - a pattern where:
 ### OpenMemory (`om-query`)
 Semantic search engine that matches user intent to stored knowledge.
 
+### Instructional Memories (Backtick Style)
+Memories that instruct the agent *how* to use the CLI, rather than executing it automatically.
+```
+text: "To update task details interactively, use `ptt update -i`."
+tags: ptt, update, interactive
+```
+The agent receives this instruction and can choose to run the command.
+
 ### Executable Tags (`exec:...`)
 Memories carry execution instructions. Memory text introduces the CLI output:
 ```
@@ -76,6 +84,25 @@ OpenCode plugin that:
 |--------|-------------|-----------|
 | Quick note | Quick notes → /home/joebutler/vault/scratchpad.md | - |
 | Search vault | Search with ripgrep at /home/joebutler/vault | - |
+
+### Interactive Maintenance (Instructional)
+| Intent | Memory Text | Tags |
+|--------|-------------|------|
+| Update task | To update task details interactively, use `ptt update -i` | `ptt`, `update` |
+| Archive task | To mark as done and move to archive, use `ptt archive -i` | `ptt`, `archive` |
+| Log progress | To log progress on recurring task, use `ptt log -i` | `ptt`, `log` |
+| Add note | To append note to task, use `ptt add-note -i` | `ptt`, `note` |
+
+### AI Guidance & TUI (Instructional)
+| Intent | Memory Text | Tags |
+|--------|-------------|------|
+| Behavior | Rules for agent behavior: `ptt behaviour` | `ptt`, `rules` |
+| Planning | Planning principles: `ptt planning` | `ptt`, `planning` |
+| Requests | SOPs for common requests: `ptt requests` | `ptt`, `sop` |
+| Dashboard | Open daily dashboard: `expo today` | `ptt`, `tui` |
+| Task Manager | Open task manager: `expo tasks` | `ptt`, `tui` |
+| View Backlog | View backlog tasks: `ptt backlog` | `ptt`, `backlog` |
+| JSON Views | Get raw JSON models: `ptt view today/tasks` | `ptt`, `json` |
 
 ## PTT Commands
 
