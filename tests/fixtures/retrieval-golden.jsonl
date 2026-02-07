@@ -1,23 +1,23 @@
-{"query": "create a new task", "expected_memory_content_substring": "create or add a new task", "expected_exec_tags": ["ptt op schema task.create", "ptt context operations"], "intent": "task_create"}
-{"query": "add task for tomorrow", "expected_memory_content_substring": "create or add a new task", "expected_exec_tags": ["ptt op schema task.create", "ptt context operations"], "intent": "task_create"}
-{"query": "make a task", "expected_memory_content_substring": "create or add a new task", "expected_exec_tags": ["ptt op schema task.create", "ptt context operations"], "intent": "task_create"}
-{"query": "show my tasks", "expected_memory_content_substring": "current task list", "expected_exec_tags": ["ptt list"], "intent": "task_list"}
-{"query": "what should I work on", "expected_memory_content_substring": "what to work on or how to decide", "expected_exec_tags": ["ptt flow"], "intent": "task_flow"}
-{"query": "list tasks by priority", "expected_memory_content_substring": "current task list", "expected_exec_tags": ["ptt list"], "intent": "task_list"}
-{"query": "complete a task", "expected_memory_content_substring": "complete an item", "expected_exec_tags": ["ptt op schema item.complete", "ptt context operations"], "intent": "task_complete"}
-{"query": "mark task as done", "expected_memory_content_substring": "complete", "expected_exec_tags": ["ptt op schema item.complete", "ptt context operations"], "intent": "task_complete"}
-{"query": "add an event", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["ptt op schema event.create", "ptt context operations"], "intent": "event_create"}
-{"query": "what's happening this week", "expected_memory_content_substring": "week ahead schedule", "expected_exec_tags": ["ptt week"], "intent": "event_week"}
-{"query": "schedule something for tuesday", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["ptt op schema event.create", "ptt context operations"], "intent": "event_create"}
-{"query": "show my calendar", "expected_memory_content_substring": "upcoming events", "expected_exec_tags": ["ptt events"], "intent": "event_list"}
-{"query": "weekly review", "expected_memory_content_substring": "request workflows", "expected_exec_tags": ["ptt requests"], "intent": "planning_review"}
-{"query": "plan my day", "expected_memory_content_substring": "what to work on or how to decide", "expected_exec_tags": ["ptt flow"], "intent": "planning_flow"}
-{"query": "log progress on habit", "expected_memory_content_substring": "log progress on a recurring task", "expected_exec_tags": ["ptt op schema task.log", "ptt context operations"], "intent": "task_log"}
-{"query": "update task priority", "expected_memory_content_substring": "update task details", "expected_exec_tags": ["ptt op schema item.update", "ptt context operations"], "intent": "task_update"}
-{"query": "add a note to task", "expected_memory_content_substring": "append a timestamped note", "expected_exec_tags": ["ptt op schema task.add_note", "ptt context operations"], "intent": "task_note"}
-{"query": "show backlog", "expected_memory_content_substring": "backlog", "expected_exec_tags": ["ptt backlog"], "intent": "task_backlog"}
+{"query": "create a new task", "expected_memory_content_substring": "create or add a new task", "expected_exec_tags": ["exec:ptt op schema task.create", "exec:ptt context operations"], "intent": "task_create"}
+{"query": "add task for tomorrow", "expected_memory_content_substring": "create or add a new task", "expected_exec_tags": ["exec:ptt op schema task.create", "exec:ptt context operations"], "intent": "task_create"}
+{"query": "make a task", "expected_memory_content_substring": "create or add a new task", "expected_exec_tags": ["exec:ptt op schema task.create", "exec:ptt context operations"], "intent": "task_create"}
+{"query": "show my tasks", "expected_memory_content_substring": "current task list", "expected_exec_tags": ["exec:ptt list"], "intent": "task_list"}
+{"query": "what should I work on", "expected_memory_content_substring": "what to work on or how to decide", "expected_exec_tags": ["exec:ptt flow"], "intent": "task_flow"}
+{"query": "list tasks by priority", "expected_memory_content_substring": "current task list", "expected_exec_tags": ["exec:ptt list"], "intent": "task_list"}
+{"query": "complete a task", "expected_memory_content_substring": "complete an item", "expected_exec_tags": ["exec:ptt op schema item.complete", "exec:ptt context operations"], "intent": "task_complete"}
+{"query": "mark task as done", "expected_memory_content_substring": "complete", "expected_exec_tags": ["exec:ptt op schema item.complete", "exec:ptt context operations"], "intent": "task_complete"}
+{"query": "add an event", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["exec:ptt op schema event.create", "exec:ptt context operations"], "intent": "event_create"}
+{"query": "what's happening this week", "expected_memory_content_substring": "week ahead schedule", "expected_exec_tags": ["exec:ptt week"], "intent": "event_week"}
+{"query": "schedule something for tuesday", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["exec:ptt op schema event.create", "exec:ptt context operations"], "intent": "event_create"}
+{"query": "show my calendar", "expected_memory_content_substring": "upcoming events", "expected_exec_tags": ["exec:ptt events"], "intent": "event_list"}
+{"query": "weekly review", "expected_memory_content_substring": "request workflows", "expected_exec_tags": ["exec:ptt requests"], "intent": "planning_review"}
+{"query": "plan my day", "expected_memory_content_substring": "what to work on or how to decide", "expected_exec_tags": ["exec:ptt flow"], "intent": "planning_flow"}
+{"query": "log progress on habit", "expected_memory_content_substring": "log progress on a recurring task", "expected_exec_tags": ["exec:ptt op schema task.log", "exec:ptt context operations"], "intent": "task_log"}
+{"query": "update task priority", "expected_memory_content_substring": "update task details", "expected_exec_tags": ["exec:ptt op schema item.update", "exec:ptt context operations"], "intent": "task_update"}
+{"query": "add a note to task", "expected_memory_content_substring": "append a timestamped note", "expected_exec_tags": ["exec:ptt op schema task.add_note", "exec:ptt context operations"], "intent": "task_note"}
+{"query": "show backlog", "expected_memory_content_substring": "backlog", "expected_exec_tags": ["exec:ptt backlog"], "intent": "task_backlog"}
 {"query": "open dashboard", "expected_memory_content_substring": null, "expected_exec_tags": [], "intent": "tui_dashboard", "note": "no memory covers TUI launch yet"}
-{"query": "how should the agent behave", "expected_memory_content_substring": "behaviour rules", "expected_exec_tags": ["ptt behaviour"], "intent": "guidance_behaviour"}
+{"query": "how should the agent behave", "expected_memory_content_substring": "behaviour rules", "expected_exec_tags": ["exec:ptt behaviour"], "intent": "guidance_behaviour"}
 {"query": "what's the weather today", "expected_memory_content_substring": null, "expected_exec_tags": [], "intent": "irrelevant"}
 {"query": "write me a poem", "expected_memory_content_substring": null, "expected_exec_tags": [], "intent": "irrelevant"}
 {"query": "delete all my files", "expected_memory_content_substring": null, "expected_exec_tags": [], "intent": "irrelevant_dangerous"}
