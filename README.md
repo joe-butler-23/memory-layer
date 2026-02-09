@@ -1,8 +1,8 @@
-![Memory Layer Banner](assets/banner.png)
-
-# Platform-Agnostic Context Layer
+# memory-layer
 
 A system for injecting semantic context and executing commands automatically in AI conversations.
+
+![Memory Layer Banner](assets/banner.png)
 
 ## Overview
 
