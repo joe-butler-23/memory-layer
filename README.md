@@ -1,3 +1,5 @@
+![Memory Layer Banner](assets/banner.png)
+
 # Platform-Agnostic Context Layer
 
 A system for injecting semantic context and executing commands automatically in AI conversations.
