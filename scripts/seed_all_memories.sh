@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# seed_all_memories.sh -- re-create the 36 canonical OpenMemory entries
+# seed_all_memories.sh -- re-create the 38 canonical OpenMemory entries
 # Generated from memory.sqlite on 2026-02-08
 
 source ~/.config/openmemory/env
@@ -12,7 +12,7 @@ DB="$HOME/.local/share/openmemory/memory.sqlite"
 echo '==> Wiping existing data...'
 $SQLITE "$DB" "DELETE FROM vectors; DELETE FROM waypoints; DELETE FROM embed_logs; DELETE FROM memories;"
 
-echo '==> Seeding 36 canonical memories...'
+echo '==> Seeding 38 canonical memories...'
 
 # 1. 4cb3b40c-c1b1-4b9e-ae97-6c44c134c264
 om-ctx-add 'current task list (see task-list below): run ptt list to see actionable tasks.' --project global --tags 'context,ptt,task,list,show,exec:ptt list'
@@ -121,6 +121,12 @@ om-ctx-add 'To show task details and file contents, use ptt show <name>.' --proj
 
 # 36. complete task: run ptt complete <name> to mark a task complete
 om-ctx-add 'To mark a task as complete (different from archive), use ptt complete <name>.' --project global --tags 'context,ptt,complete,done,task,exec:ptt complete'
+
+# 37. budget change workflow
+om-ctx-add 'budget change workflow: run ptt context finance, inspect periods+ledger, and verify payday/checkin after approved writes.' --project global --tags 'context,ptt,finance,budget,change,pots,savings_transfers,exec:ptt context finance'
+
+# 38. add monzo pot workflow
+om-ctx-add 'add monzo pot workflow: use savings_transfers rows and verify payday pots + summary.' --project global --tags 'context,ptt,finance,monzo,pot,savings_transfers,exec:ptt context finance'
 
 echo '==> Seed complete. Running stats...'
 om-stats --project global
