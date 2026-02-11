@@ -113,8 +113,8 @@ om-ctx-add 'Weekly review workflow: run ptt review for the full review process.'
 # 33. list scheduled tasks: run ptt list scheduled to see scheduled tasks
 om-ctx-add 'Scheduled tasks: run ptt list scheduled to see tasks with scheduled dates.' --project global --tags 'context,ptt,scheduled,list,tasks,exec:ptt list scheduled'
 
-# 34. list today: run ptt list today to see tasks scheduled for today
-om-ctx-add 'Tasks scheduled for today: run ptt list today to see what is on for today.' --project global --tags 'context,ptt,today,list,scheduled,exec:ptt list today'
+# 34. list scheduled: run ptt list scheduled and check today's date
+om-ctx-add 'Tasks scheduled for today: run ptt list scheduled and check entries for today.' --project global --tags 'context,ptt,today,list,scheduled,exec:ptt list scheduled'
 
 # 35. show task: run ptt show <name> to display task file contents
 om-ctx-add 'To show task details and file contents, use ptt show <name>.' --project global --tags 'context,ptt,show,view,task,exec:ptt show'
