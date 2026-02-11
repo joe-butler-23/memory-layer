@@ -26,8 +26,8 @@ om-ctx-add 'Completed tasks from the last 30 days (see done below): run ptt list
 # 4. e0d521e4-fb00-4a07-996a-017e9d419d62
 om-ctx-add 'Tasks with upcoming deadlines (see due below): run ptt list --due for tasks with due dates.' --project global --tags 'context,ptt,task,due,exec:ptt list --due'
 
-# 5. df5d3ee7-ae45-4c27-b81d-31afc4a21a61
-om-ctx-add 'Sprint-focused tasks (see sprint below): run ptt list --sprint for current sprint.' --project global --tags 'context,ptt,task,sprint,exec:ptt list --sprint'
+# 5. finance check-in workflow
+om-ctx-add 'Finance check-in workflow: run ptt context finance for database locations, SQL queries, and weekly budget calculations.' --project global --tags 'context,ptt,finance,budget,checkin,exec:ptt context finance'
 
 # 6. ab1ad79b-183c-44de-bd33-7be22846086a
 om-ctx-add 'Upcoming events (see events below): run ptt events to see calendar events.' --project global --tags 'context,ptt,event,exec:ptt events'
