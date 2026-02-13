@@ -12,7 +12,8 @@ DB="$HOME/.local/share/openmemory/memory.sqlite"
 echo '==> Wiping existing data...'
 $SQLITE "$DB" "DELETE FROM vectors; DELETE FROM waypoints; DELETE FROM embed_logs; DELETE FROM memories;"
 
-echo '==> Seeding 38 canonical memories...'
+MEMORY_COUNT=$(grep -c '^om-ctx-add ' "$0")
+echo "==> Seeding $MEMORY_COUNT canonical memories..."
 
 # 1. 4cb3b40c-c1b1-4b9e-ae97-6c44c134c264
 om-ctx-add 'current task list (see task-list below): run ptt list to see actionable tasks.' --project global --tags 'context,ptt,task,list,show,exec:ptt list'
@@ -127,6 +128,15 @@ om-ctx-add 'budget change workflow: run ptt context finance, inspect periods+led
 
 # 38. add monzo pot workflow
 om-ctx-add 'add monzo pot workflow: use savings_transfers rows and verify payday pots + summary.' --project global --tags 'context,ptt,finance,monzo,pot,savings_transfers,exec:ptt context finance'
+
+# 39. dotfiles managed via chezmoi
+om-ctx-add 'Dotfiles are managed via chezmoi. To edit a dotfile, use `chezmoi edit <file>` (never edit the target directly). After changes, run `chezmoi apply` to deploy. Source of truth: `chezmoi source-path` (typically ~/.local/share/chezmoi).' --project global --tags 'context,dotfiles,chezmoi,edit,apply,workflow'
+
+# 40. zsh config location (XDG)
+om-ctx-add 'Zsh configuration lives at ~/.config/zsh (XDG-compliant), not ~/.zshrc. Key files: ~/.config/zsh/.zshrc, ~/.config/zsh/.zshenv, etc. These are managed by chezmoi — use `chezmoi edit ~/.config/zsh/.zshrc` to modify.' --project global --tags 'context,zsh,config,xdg,dotfiles,chezmoi'
+
+# 41. how to add a new OpenMemory entry
+om-ctx-add 'To add a new OpenMemory entry: `om-ctx-add '\''<text>'\'' --project global --tags '\''context,<relevant>,<tags>'\''`. After adding, also append the entry to ~/development/memory-layer/scripts/seed_all_memories.sh so it survives reseeds.' --project global --tags 'context,openmemory,add,create,new,memory,meta'
 
 echo '==> Seed complete. Running stats...'
 om-stats --project global
