@@ -9,7 +9,7 @@ A system for injecting semantic context and executing commands automatically in 
 This project implements **Executable Memories** - a pattern where:
 1. User speaks naturally ("create a task for tomorrow")
 2. OpenMemory semantically matches relevant procedural knowledge
-3. Plugin executes embedded commands (`ptt schema task`)
+3. Plugin executes embedded commands (`ptt op schema task.create`)
 4. AI receives context + command output, acts without user steering
 
 ## Core Principles
@@ -49,6 +49,16 @@ OpenCode plugin that:
 4. Executes commands via `sh -c`
 5. Injects combined context into conversation
 
+### Command Policy
+Auto-executed `exec:` commands are policy-gated by `config/command-policy.json`.
+
+- `exec_mode_default`: global mode default (`safe`, `plan`, `permissive`) when `OM_EXEC_MODE` is unset.
+- `OM_EXEC_MODE`: runtime override per client/session (`safe`, `plan`, `permissive`).
+- `read_only`: always eligible for auto execution.
+- `write_safe`: auto-executed only in `permissive` mode.
+- `write_guarded`: auto-executed in `permissive`, or in `plan` when command mode is `--mode plan`.
+- `blocked_patterns`: always blocked regardless of mode.
+
 ## Installation
 
 1. Copy plugin to `.opencode/plugin/memory-check.js`
@@ -61,7 +71,7 @@ OpenCode plugin that:
 ### Task Management
 | Intent | Memory Text | Exec Tags |
 |--------|-------------|-----------|
-| Create task | workType options: actionable, habit, phase... | `ptt schema task`, `ptt context` |
+| Create task | Operation contract for task creation | `ptt op schema task.create`, `ptt context operations` |
 | List tasks | Current task list: | `ptt list` |
 | Complete task | To mark a task complete: | `ptt completion` |
 | View deadlines | Tasks with upcoming deadlines: | `ptt list --due` |
@@ -71,7 +81,7 @@ OpenCode plugin that:
 ### Events & Calendar
 | Intent | Memory Text | Exec Tags |
 |--------|-------------|-----------|
-| Create event | (semantic match) | `ptt schema event` |
+| Create event | Operation contract for event/reminder creation | `ptt op schema event.create` |
 | List events | Upcoming events: | `ptt events` |
 | Weekly view | Week ahead schedule: | `ptt week` |
 
@@ -117,8 +127,8 @@ ptt list --sprint     # Sprint-flagged tasks
 ptt events            # Upcoming events
 ptt week              # Week ahead (events + scheduled tasks)
 ptt review            # Weekly review workflow
-ptt schema task       # Task template
-ptt schema event      # Event template
+ptt op schema task.create   # Task-create operation contract
+ptt op schema event.create  # Event-create operation contract
 ptt flow              # Execution flow guidance
 ptt completion        # Task completion steps
 ```
@@ -146,7 +156,7 @@ tail -f /tmp/opencode-memory-debug.log
 Successful execution shows:
 ```
 QUERY: Querying memories for {"message":"create a task"}
-EXEC: Auto-executing command {"cmd":"ptt schema task"}
+EXEC: Auto-executing command {"cmd":"ptt op schema task.create"}
 SUCCESS: Injected context {"totalLines":24}
 ```
 

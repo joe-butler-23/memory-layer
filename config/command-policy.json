@@ -1,5 +1,6 @@
 {
   "default_policy": "deny",
+  "exec_mode_default": "permissive",
   "commands": {
     "ptt list": "read_only",
     "ptt list overdue": "read_only",
@@ -55,6 +56,10 @@
     },
     {
       "prefix": "infrastructure/scripts/",
+      "policy": "read_only"
+    },
+    {
+      "prefix": "./infrastructure/scripts/",
       "policy": "read_only"
     }
   ],

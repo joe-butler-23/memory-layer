@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# seed_all_memories.sh -- re-create the 38 canonical OpenMemory entries
+# seed_all_memories.sh -- re-create canonical OpenMemory entries
 # Generated from memory.sqlite on 2026-02-08
 
 source ~/.config/openmemory/env
@@ -121,7 +121,7 @@ om-ctx-add 'Tasks scheduled for today: run ptt list scheduled and check entries 
 om-ctx-add 'To show task details and file contents, use ptt show <name>.' --project global --tags 'context,ptt,show,view,task,exec:ptt show'
 
 # 36. complete task: run ptt complete <name> to mark a task complete
-om-ctx-add 'To mark a task as complete (different from archive), use ptt complete <name>.' --project global --tags 'context,ptt,complete,done,task,exec:ptt complete'
+om-ctx-add 'To mark a task as complete (different from archive), use ptt complete <name>.' --project global --tags 'context,ptt,complete,done,task'
 
 # 37. budget change workflow
 om-ctx-add 'budget change workflow: run ptt context finance, inspect periods+ledger, and verify payday/checkin after approved writes.' --project global --tags 'context,ptt,finance,budget,change,pots,savings_transfers,exec:ptt context finance'
