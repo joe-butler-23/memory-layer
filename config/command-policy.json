@@ -37,7 +37,8 @@
     "mep memory autolearn --help": "read_only",
     "python3 ~/vault/infrastructure/scripts/log-blood-pressure.py --help": "read_only",
     "python3 ~/vault/infrastructure/scripts/sync-health-data.py --help": "read_only",
-    "python3 ~/vault/infrastructure/scripts/generate-weekly-review.py --help": "read_only"
+    "python3 ~/vault/infrastructure/scripts/generate-weekly-review.py --help": "read_only",
+    "~/vault/infrastructure/scripts/health-sync-weekly-review.sh --help": "read_only"
   },
   "prefix_rules": [
     {

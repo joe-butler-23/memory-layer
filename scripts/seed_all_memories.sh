@@ -174,5 +174,8 @@ om-ctx-add 'Health data sync workflow: run python3 ~/vault/infrastructure/script
 # 53. health weekly review generation route
 om-ctx-add 'Health weekly review generation: run python3 ~/vault/infrastructure/scripts/generate-weekly-review.py --help for deterministic artifact generation flags.' --project global --tags 'context,health,weekly-review,generate,workflow,exec:python3 ~/vault/infrastructure/scripts/generate-weekly-review.py --help'
 
+# 54. health composite sync+review helper route
+om-ctx-add 'Health sync + review helper: run ~/vault/infrastructure/scripts/health-sync-weekly-review.sh --help for plan-safe defaults and apply mode.' --project global --tags 'context,health,weekly-review,sync,composite,helper,exec:~/vault/infrastructure/scripts/health-sync-weekly-review.sh --help'
+
 echo '==> Seed complete. Running stats...'
 om-stats --project global
