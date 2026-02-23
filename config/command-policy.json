@@ -34,7 +34,10 @@
     "mep recipe import-url --help": "read_only",
     "mep memory ingest --help": "read_only",
     "mep memory verify --help": "read_only",
-    "mep memory autolearn --help": "read_only"
+    "mep memory autolearn --help": "read_only",
+    "python3 ~/vault/infrastructure/scripts/log-blood-pressure.py --help": "read_only",
+    "python3 ~/vault/infrastructure/scripts/sync-health-data.py --help": "read_only",
+    "python3 ~/vault/infrastructure/scripts/generate-weekly-review.py --help": "read_only"
   },
   "prefix_rules": [
     {

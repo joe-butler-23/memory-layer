@@ -159,5 +159,20 @@ om-ctx-add 'Recipe extraction verification gate: run mep memory verify --help to
 # 48. recipe autolearn promotion
 om-ctx-add 'Recipe extraction autolearn workflow: run mep memory autolearn --help to promote repeated unresolved clusters into deterministic aliases.' --project global --tags 'context,mep,recipe,extraction,autolearn,promotion,exec:mep memory autolearn --help'
 
+# 49. recipe composition planning alias
+om-ctx-add 'Build one shopping list from multiple recipes: run mep sl sync plan --help and use the plan workflow before apply.' --project global --tags 'context,mep,recipe,composition,shopping,list,merge,exec:mep sl sync plan --help'
+
+# 50. pantry-aware recipe routing alias
+om-ctx-add 'Pantry-aware recipe composition: run mep recipe import-url --help to normalize recipe sources before shopping composition.' --project global --tags 'context,mep,recipe,pantry,composition,import,exec:mep recipe import-url --help'
+
+# 51. health blood pressure logging route
+om-ctx-add 'Log blood pressure reading workflow: run python3 ~/vault/infrastructure/scripts/log-blood-pressure.py --help for argument contract and dry-run support.' --project global --tags 'context,health,blood-pressure,log,workflow,exec:python3 ~/vault/infrastructure/scripts/log-blood-pressure.py --help'
+
+# 52. health data sync route
+om-ctx-add 'Health data sync workflow: run python3 ~/vault/infrastructure/scripts/sync-health-data.py --help to choose sources, date bounds, and dry-run options.' --project global --tags 'context,health,sync,workflow,exec:python3 ~/vault/infrastructure/scripts/sync-health-data.py --help'
+
+# 53. health weekly review generation route
+om-ctx-add 'Health weekly review generation: run python3 ~/vault/infrastructure/scripts/generate-weekly-review.py --help for deterministic artifact generation flags.' --project global --tags 'context,health,weekly-review,generate,workflow,exec:python3 ~/vault/infrastructure/scripts/generate-weekly-review.py --help'
+
 echo '==> Seed complete. Running stats...'
 om-stats --project global
