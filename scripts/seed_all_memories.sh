@@ -138,5 +138,14 @@ om-ctx-add 'Zsh configuration lives at ~/.config/zsh (XDG-compliant), not ~/.zsh
 # 41. how to add a new OpenMemory entry
 om-ctx-add 'To add a new OpenMemory entry: `om-ctx-add '\''<text>'\'' --project global --tags '\''context,<relevant>,<tags>'\''`. After adding, also append the entry to ~/development/memory-layer/scripts/seed_all_memories.sh so it survives reseeds.' --project global --tags 'context,openmemory,add,create,new,memory,meta'
 
+# 42. todoist shopping sync control plane
+om-ctx-add 'Todoist shopping sync control plane: run mep sl sync plan --help for contract details, then execute plan -> review -> apply, with rollback from snapshots when needed.' --project global --tags 'context,mep,todoist,shopping,sync,plan,apply,rollback,exec:mep sl sync plan --help'
+
+# 43. todoist shopping preflight
+om-ctx-add 'Todoist shopping preflight: run mep sl sync validate --help for strict desired-state checks before planning.' --project global --tags 'context,mep,todoist,shopping,validate,preflight,strict,exec:mep sl sync validate --help'
+
+# 44. todoist shopping failure recovery
+om-ctx-add 'Todoist shopping sync failure recovery: run mep sl sync rollback --help and generate a rollback plan from the latest snapshot before any further writes.' --project global --tags 'context,mep,todoist,shopping,recovery,rollback,snapshot,exec:mep sl sync rollback --help'
+
 echo '==> Seed complete. Running stats...'
 om-stats --project global

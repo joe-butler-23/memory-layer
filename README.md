@@ -91,6 +91,13 @@ Auto-executed `exec:` commands are policy-gated by `config/command-policy.json`.
 | Plan day | (semantic match) | `ptt flow` |
 | Weekly review | Weekly review workflow: | `ptt review` |
 
+### Cooking & Shopping
+| Intent | Memory Text | Exec Tags |
+|--------|-------------|-----------|
+| Todoist shopping sync | Todoist shopping sync control plane | `mep sl sync plan --help` |
+| Todoist shopping preflight | Strict desired-state preflight before planning | `mep sl sync validate --help` |
+| Todoist shopping recovery | Rollback-first recovery workflow from snapshots | `mep sl sync rollback --help` |
+
 ### Quick Capture
 | Intent | Memory Text | Exec Tags |
 |--------|-------------|-----------|

@@ -35,7 +35,10 @@
     "ptt item": "write",
     "ptt log": "write",
     "ptt add-note": "write",
-    "ptt scan": "read_only"
+    "ptt scan": "read_only",
+    "mep sl sync plan --help": "read_only",
+    "mep sl sync validate --help": "read_only",
+    "mep sl sync rollback --help": "read_only"
   },
   "prefix_rules": [
     {
