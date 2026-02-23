@@ -6,9 +6,7 @@
     "ptt list overdue": "read_only",
     "ptt list --done": "read_only",
     "ptt list --due": "read_only",
-    "ptt list --sprint": "read_only",
     "ptt list scheduled": "read_only",
-    "ptt list today": "read_only",
     "ptt events": "read_only",
     "ptt week": "read_only",
     "ptt completion": "read_only",
@@ -19,26 +17,24 @@
     "ptt backlog": "read_only",
     "ptt review": "read_only",
     "ptt schema project": "read_only",
-    "ptt schema task": "read_only",
-    "ptt schema event": "read_only",
     "ptt create": "write",
     "ptt create-event": "write",
     "ptt complete": "write",
     "ptt update": "write",
     "ptt archive": "write",
-    "ptt pick": "read_only",
-    "ptt notes": "read_only",
     "ptt plan": "write",
-    "ptt work": "read_only",
     "ptt reschedule": "write",
     "ptt event": "write",
     "ptt item": "write",
     "ptt log": "write",
     "ptt add-note": "write",
-    "ptt scan": "read_only",
     "mep sl sync plan --help": "read_only",
     "mep sl sync validate --help": "read_only",
-    "mep sl sync rollback --help": "read_only"
+    "mep sl sync rollback --help": "read_only",
+    "mep recipe import-url --help": "read_only",
+    "mep memory ingest --help": "read_only",
+    "mep memory verify --help": "read_only",
+    "mep memory autolearn --help": "read_only"
   },
   "prefix_rules": [
     {
@@ -55,14 +51,6 @@
     },
     {
       "prefix": "ptt context",
-      "policy": "read_only"
-    },
-    {
-      "prefix": "infrastructure/scripts/",
-      "policy": "read_only"
-    },
-    {
-      "prefix": "./infrastructure/scripts/",
       "policy": "read_only"
     }
   ],

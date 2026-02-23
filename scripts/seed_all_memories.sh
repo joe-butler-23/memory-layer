@@ -147,5 +147,17 @@ om-ctx-add 'Todoist shopping preflight: run mep sl sync validate --help for stri
 # 44. todoist shopping failure recovery
 om-ctx-add 'Todoist shopping sync failure recovery: run mep sl sync rollback --help and generate a rollback plan from the latest snapshot before any further writes.' --project global --tags 'context,mep,todoist,shopping,recovery,rollback,snapshot,exec:mep sl sync rollback --help'
 
+# 45. recipe import control plane
+om-ctx-add 'Recipe import workflow: run mep recipe import-url --help for URL import contract and output shape before ingesting new recipes.' --project global --tags 'context,mep,recipe,import,url,workflow,exec:mep recipe import-url --help'
+
+# 46. recipe memory ingest preflight
+om-ctx-add 'Recipe extraction ingest: run mep memory ingest --help for deterministic ingest options and adjudicator toggles.' --project global --tags 'context,mep,recipe,extraction,memory,ingest,exec:mep memory ingest --help'
+
+# 47. recipe memory verification gate
+om-ctx-add 'Recipe extraction verification gate: run mep memory verify --help to validate resolution accuracy before shipping changes.' --project global --tags 'context,mep,recipe,extraction,verify,accuracy,exec:mep memory verify --help'
+
+# 48. recipe autolearn promotion
+om-ctx-add 'Recipe extraction autolearn workflow: run mep memory autolearn --help to promote repeated unresolved clusters into deterministic aliases.' --project global --tags 'context,mep,recipe,extraction,autolearn,promotion,exec:mep memory autolearn --help'
+
 echo '==> Seed complete. Running stats...'
 om-stats --project global

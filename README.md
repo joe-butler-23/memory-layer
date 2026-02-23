@@ -75,7 +75,6 @@ Auto-executed `exec:` commands are policy-gated by `config/command-policy.json`.
 | List tasks | Current task list: | `ptt list` |
 | Complete task | To mark a task complete: | `ptt completion` |
 | View deadlines | Tasks with upcoming deadlines: | `ptt list --due` |
-| Sprint tasks | Sprint-focused tasks: | `ptt list --sprint` |
 | Completed tasks | Completed tasks from last 30 days: | `ptt list --done` |
 
 ### Events & Calendar
@@ -97,6 +96,10 @@ Auto-executed `exec:` commands are policy-gated by `config/command-policy.json`.
 | Todoist shopping sync | Todoist shopping sync control plane | `mep sl sync plan --help` |
 | Todoist shopping preflight | Strict desired-state preflight before planning | `mep sl sync validate --help` |
 | Todoist shopping recovery | Rollback-first recovery workflow from snapshots | `mep sl sync rollback --help` |
+| Recipe import contract | URL import CLI contract and output shape | `mep recipe import-url --help` |
+| Recipe ingest contract | Deterministic memory ingest options | `mep memory ingest --help` |
+| Recipe verify gate | Resolution quality validation gate | `mep memory verify --help` |
+| Recipe autolearn promotion | Alias/autolearn promotion flow | `mep memory autolearn --help` |
 
 ### Quick Capture
 | Intent | Memory Text | Exec Tags |
@@ -130,7 +133,6 @@ ptt list              # Actionable tasks (priority 3=high, 1=low)
 ptt list 3            # Filter by priority
 ptt list --done       # Completed tasks (last 30 days)
 ptt list --due        # Tasks with due dates
-ptt list --sprint     # Sprint-flagged tasks
 ptt events            # Upcoming events
 ptt week              # Week ahead (events + scheduled tasks)
 ptt review            # Weekly review workflow
