@@ -54,3 +54,10 @@ bash -n scripts/seed_all_memories.sh
 # Cross-repo parity (recommended)
 cargo run --manifest-path ~/development/ptt/Cargo.toml --bin ptt -- doctor
 ```
+
+## Skill References
+
+Cross-domain memory behavior guidance lives in:
+
+- `~/development/ai/tooling/skills/memory/SKILL.md`
+- `~/development/ai/tooling/skills/clai/SKILL.md`
