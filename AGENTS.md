@@ -17,6 +17,12 @@ Primary assets:
 2. `config/command-policy.json` defines auto-exec allow/block semantics.
 3. Client hook implementations live in `~/development/ai/hooks/*` and must stay aligned.
 
+## Domain Interface Contract (CLI-First)
+
+1. Memory governance should be driven by repo artifacts and CLI checks (`clai memory ...`, `jq`, `bash -n`) as canonical interfaces.
+2. `AGENTS.md` documents routing and safety; memory skill files are ad hoc overlays.
+3. If a frequent workflow is unclear, improve CLI/help/docs in owning repos instead of adding hidden process text.
+
 ## Exec Mode Contract
 
 - `exec_mode_default` in policy sets baseline mode.
