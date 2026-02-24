@@ -63,7 +63,8 @@ cargo run --manifest-path ~/development/ptt/Cargo.toml --bin ptt -- doctor
 
 ## Skill References
 
-Cross-domain memory behavior guidance lives in:
+Skills are ad hoc overlays only. Canonical memory behavior is defined in this repo files + `clai memory --help`.
 
-- `~/development/ai/tooling/skills/memory/SKILL.md`
-- `~/development/ai/tooling/skills/clai/SKILL.md`
+Optional ad hoc references:
+- `~/development/ai/tooling/skills/create-skill/SKILL.md`
+- `~/development/ai/tooling/skills/writing-style/SKILL.md`
