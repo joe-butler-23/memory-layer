@@ -1,1 +1,0 @@
-/home/joebutler/development/ai/hooks/gemini/gemini-memory-wrapper.sh

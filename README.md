@@ -60,10 +60,11 @@ Auto-executed `exec:` commands are policy-gated by `config/command-policy.json`.
 
 ## Installation
 
-1. Copy plugin to `.opencode/plugin/memory-check.js`
-2. Ensure `package.json` has `@opencode-ai/plugin` dependency
-3. Run `bun install` in `.opencode/`
-4. Launch OpenCode from the project directory
+Hooks and configs are deployed by the `ai` repo installer:
+
+```bash
+~/development/ai/scripts/install.sh
+```
 
 ## Debugging
 
@@ -87,8 +88,6 @@ SUCCESS: Injected context {"totalLines":24}
 - OpenCode 1.1.20+
 
 ## Status
-
-**Priority 1, 2 (Embeddings), & 3 Complete**
 
 - All core productivity memories seeded
 - PTT commands implemented (`--done`, `--due`, `--sprint`, `events`, `week`, `review`)
