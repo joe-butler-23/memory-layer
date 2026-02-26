@@ -79,13 +79,13 @@ om-ctx-add 'To append a timestamped note to a task'\''s body, use ptt add-note <
 om-ctx-add 'To get raw JSON view models for UI integration, use '\`'ptt view today'\`' or '\`'ptt view tasks'\`'.' --project global --tags 'context,ptt,api,json,view,cli'
 
 # 22. 9777acdc-aa5a-4a50-9276-d4fa154b91ee
-om-ctx-add 'To open the full task manager TUI with filters, use the command '\`'expo tasks'\`'.' --project global --tags 'context,ptt,tui,manager,expo'
+om-ctx-add 'To open the interactive task manager TUI, use '\`'pt'\`' or '\`'pttui'\`'.' --project global --tags 'context,ptt,tui,manager,launcher'
 
 # 23. 8983f1bb-2cdb-48c1-8a37-e0db9131d4ee
-om-ctx-add 'To open the interactive daily dashboard TUI, use the command '\`'expo today'\`'.' --project global --tags 'context,ptt,tui,dashboard,expo'
+om-ctx-add 'Use '\`'pt'\`' as the default interactive dashboard launcher; use '\`'pttui'\`' for the explicit binary command.' --project global --tags 'context,ptt,tui,dashboard,launcher'
 
 # 24. 743cc88c-38a2-4b96-94b0-dd4376278b70
-om-ctx-add 'pt is a shortcut wrapper: pt -> scripts/wrappers/pt.sh which wraps the ptt CLI with common flags.' --project global --tags 'context,pttui,wrapper,cli'
+om-ctx-add 'pt is a Nix-managed launcher for the pttui dashboard path (same destination as pttui, optimized for daily use).' --project global --tags 'context,pttui,wrapper,launcher'
 
 # 25. 02c00552-cfb3-4644-b81c-4d2c380082b3
 om-ctx-add 'Add a memory / remember this: om-ctx-add '\''<text>'\'' --project <project> --tags '\''tag1,tag2'\'' (project) or om-ctx-add '\''<text>'\'' --project global --tags '\''tag1,tag2'\'' (global).' --project global --tags 'context,openmemory,om,add,remember,create'
