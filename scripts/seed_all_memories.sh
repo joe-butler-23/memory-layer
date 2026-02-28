@@ -58,7 +58,7 @@ om-ctx-add 'To view tasks in the backlog (someday/maybe list), use ptt backlog f
 om-ctx-add 'to create or add a new task, use ptt op schema task.create to see the JSON contract, then run with ptt op run task.create --mode apply --input '\''{...}'\''.' --project global --tags 'context,ptt,task,create,add,new,schema,exec:ptt op schema task.create'
 
 # 15. a49ecd96-a717-4281-ae4f-c34ce7e95fe3
-om-ctx-add 'Add an event / create an event: use ptt op schema event.create to see the JSON contract, then run with ptt op run event.create --mode apply --input '\''{...}'\''.' --project global --tags 'context,ptt,event,add,create,schema,exec:ptt op schema event.create'
+om-ctx-add 'Add an event / create an event: use ptt op schema calendar.event.create to see the JSON contract, then run with ptt op run calendar.event.create --mode apply --input '\''{...}'\''.' --project global --tags 'context,ptt,event,add,create,schema,exec:ptt op schema calendar.event.create'
 
 # 16. 7847df46-ef40-41b9-8d74-f6ff621d1aa4
 om-ctx-add 'To create a new project, create a markdown file in ~/vault/projects using the project schema.' --project global --tags 'context,ptt,project,create,exec:ptt schema project'

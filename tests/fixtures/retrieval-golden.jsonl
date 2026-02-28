@@ -6,9 +6,9 @@
 {"query": "list tasks by priority", "expected_memory_content_substring": "current task list", "expected_exec_tags": ["exec:ptt list"], "intent": "task_list"}
 {"query": "complete a task", "expected_memory_content_substring": "complete an item", "expected_exec_tags": ["exec:ptt op schema item.complete", "exec:ptt context operations"], "intent": "task_complete"}
 {"query": "mark task as done", "expected_memory_content_substring": "complete", "expected_exec_tags": ["exec:ptt op schema item.complete", "exec:ptt context operations"], "intent": "task_complete"}
-{"query": "add an event", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["exec:ptt op schema event.create", "exec:ptt context operations"], "intent": "event_create"}
+{"query": "add an event", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["exec:ptt op schema calendar.event.create", "exec:ptt context operations"], "intent": "event_create"}
 {"query": "what's happening this week", "expected_memory_content_substring": "week ahead schedule", "expected_exec_tags": ["exec:ptt week"], "intent": "event_week"}
-{"query": "schedule something for tuesday", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["exec:ptt op schema event.create", "exec:ptt context operations"], "intent": "event_create"}
+{"query": "schedule something for tuesday", "expected_memory_content_substring": "Add an event", "expected_exec_tags": ["exec:ptt op schema calendar.event.create", "exec:ptt context operations"], "intent": "event_create"}
 {"query": "show my calendar", "expected_memory_content_substring": "upcoming events", "expected_exec_tags": ["exec:ptt events"], "intent": "event_list"}
 {"query": "weekly review", "expected_memory_content_substring": "request workflows", "expected_exec_tags": ["exec:ptt requests"], "intent": "planning_review"}
 {"query": "plan my day", "expected_memory_content_substring": "what to work on or how to decide", "expected_exec_tags": ["exec:ptt flow"], "intent": "planning_flow"}
