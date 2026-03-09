@@ -12,6 +12,8 @@ This project implements **Executable Memories** - a pattern where:
 3. Plugin executes embedded commands (`ptt op schema task.create`)
 4. AI receives context + command output, acts without user steering
 
+Schema-first calendar edit flows follow the same pattern (`ptt op schema calendar.event.update`).
+
 ## Core Principles
 
 - **Lazy Loading**: AI gets only what it needs, when it needs it

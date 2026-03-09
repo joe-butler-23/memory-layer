@@ -60,6 +60,9 @@ om-ctx-add 'to create or add a new task, use ptt op schema task.create to see th
 # 15. a49ecd96-a717-4281-ae4f-c34ce7e95fe3
 om-ctx-add 'Add an event / create an event: use ptt op schema calendar.event.create to see the JSON contract, then run with ptt op run calendar.event.create --mode apply --input '\''{...}'\''.' --project global --tags 'context,ptt,event,add,create,schema,exec:ptt op schema calendar.event.create'
 
+# 15b. 3f3179b4-c89f-4d28-b96d-c6d7347e4c12
+om-ctx-add 'To update an existing calendar event, use ptt op schema calendar.event.update to see the JSON contract, then run with ptt op run calendar.event.update --mode apply --input '\''{...}'\''.' --project global --tags 'context,ptt,event,update,edit,schema,exec:ptt op schema calendar.event.update'
+
 # 16. 7847df46-ef40-41b9-8d74-f6ff621d1aa4
 om-ctx-add 'To create a new project, create a markdown file in ~/vault/projects using the project schema.' --project global --tags 'context,ptt,project,create,exec:ptt schema project'
 
