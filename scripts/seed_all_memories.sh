@@ -73,7 +73,7 @@ om-ctx-add 'To update task details (priority, project, etc), use ptt update <nam
 om-ctx-add 'To mark a task as done and move it to the archive, use ptt archive <name> or ptt op run item.archive.' --project global --tags 'context,ptt,archive,completion,cli,exec:ptt op schema item.archive'
 
 # 19. 2fb7c2e4-9b1c-439f-aaa0-8249aae3d53f
-om-ctx-add 'To log a progress entry on a recurring task or habit, use ptt log <name> or ptt op run task.log.' --project global --tags 'context,ptt,log,tracking,cli,exec:ptt op schema task.log'
+om-ctx-add 'To record task progress, use projected ptt task operations: item.complete for completion/occurrence logs or task.add_note for dated notes. The old task.log operation is retired.' --project global --tags 'context,ptt,log,tracking,cli,exec:ptt op schema task.add_note'
 
 # 20. 8a314ac0-cee3-4fca-8c58-9609a2dd2e2d
 om-ctx-add 'To append a timestamped note to a task'\''s body, use ptt add-note <name> "note text" or ptt op run task.add_note.' --project global --tags 'context,ptt,note,cli,exec:ptt op schema task.add_note'
